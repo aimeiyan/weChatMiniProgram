@@ -1,0 +1,26 @@
+<view class="section">
+  <text>设置leftleft／rightright icon</text>
+  <view>
+    <slider bindchange="slider1change" left-icon="cancel" right-icon="success_no_circle" />
+  </view>
+</view>
+<view class="section">
+  <text>设置step</text>
+  <view>
+    <slider bindchange="slider2change" max="5" />
+  </view>
+</view>
+
+<view class="section">
+  <text>显示当前value</text>
+  <view>
+    <slider bindchange="slider3change" show-value />
+  </view>
+</view>
+
+<view class="section">
+  <text>设置最小/最大值</text>
+  <view>
+    <slider bindchange="slider4change" min="50" max="200" show-value />
+  </view>
+</view>

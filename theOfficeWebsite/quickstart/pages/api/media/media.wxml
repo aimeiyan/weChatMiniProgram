@@ -1,0 +1,3 @@
+<view wx:for="{{itemArr}}" 
+data-link="{{item.pageName}}"
+bindtap="forwardLink">{{item.name}}</view>

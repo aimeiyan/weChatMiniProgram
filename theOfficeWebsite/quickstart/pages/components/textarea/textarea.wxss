@@ -1,0 +1,16 @@
+page{
+    background-color: #f0f0f0;
+}
+.wrp{
+    padding: 20px;
+}
+textarea{
+    display: block;
+    border: 1px solid #ddd;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.section{
+    margin-bottom: 20px;
+}

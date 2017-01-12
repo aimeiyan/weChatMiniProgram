@@ -1,0 +1,18 @@
+<view class="wrp">
+  <view class="section">
+    <text>保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。</text>
+    <button bindtap="wxNavigateTo">wx.navigateTo(OBJECT)</button>
+  </view>
+  <view class="section">
+    <text>关闭当前页面，跳转到应用内的某个页面。</text>
+    <button bindtap="wxRedirectTo">wx.redirectTo(OBJECT)</button>
+  </view>
+  <view class="section">
+    <text>跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面</text>
+    <button bindtap="wxSwitchTab">wx.switchTab(OBJECT)</button>
+  </view>
+  <view class="section">
+    <text>关闭当前页面，返回上一页面或多级页面。可通过 getCurrentPages()) 获取当前的页面栈，决定需要返回几层。</text>
+    <button bindtap="wxNavigateBack">wx.navigateBack(OBJECT)</button>
+  </view>
+</view>

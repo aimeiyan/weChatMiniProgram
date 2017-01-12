@@ -1,0 +1,4 @@
+<view class="wrp">
+  <button bindtap="stratAndStopRecord">wx.startRecord(OBJECT),wx.stopRecord()
+  </button>
+</view>

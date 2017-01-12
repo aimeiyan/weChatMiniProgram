@@ -1,0 +1,32 @@
+<view class="wrp">
+  <view class="section">
+    <text>异步获取系统信息</text>
+    <button bindtap="wxGetSystemInfo">wx.getSystemInfo(OBJECT)</button>
+  </view>
+  <view class="section">
+    <text>同步获取系统信息</text>
+    <button bindtap="wxGetSystemInfoSync">wx.getSystemInfoSync()</button>
+  </view>
+  <view class="section">
+    <text>获取网络类型</text>
+    <button bindtap="wxGetNetworkType">wx.getNetworkType(OBJECT)</button>
+  </view>
+  <view class="section">
+    <text>监听重力感应数据，频率：5次/秒</text>
+    <button bindtap="wxOnAccelerometerChange">wx.onAccelerometerChange(CALLBACK)</button>
+  </view>
+  <view class="section">
+  <text>监听罗盘数据，频率：5次/秒</text>
+    <button bindtap="wxOnCompassChange">wx.onCompassChange(CALLBACK)</button>
+  </view>
+  <view class="section">
+    <text>拨打电话</text>
+    <button bindtap="wxMakePhoneCall">wx.makePhoneCall(OBJECT)</button>
+  </view>
+
+  <view class="section">
+    <text>调起客户端扫码界面，扫码成功后返回对应的结果</text>
+    <button bindtap="wxScanCode">wx.scanCode(OBJECT)
+</button>
+  </view>
+</view>

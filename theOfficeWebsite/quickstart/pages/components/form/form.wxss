@@ -1,0 +1,10 @@
+/* pages/components/form/form.wxss */
+.section-gap{
+    margin-bottom: 30px;
+}
+.form{
+    padding: 30px;
+}
+input{
+    border: 1px solid #ccc;
+}

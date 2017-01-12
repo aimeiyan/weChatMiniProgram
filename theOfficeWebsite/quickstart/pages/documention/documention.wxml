@@ -1,0 +1,30 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view bindtap="bindViewTap">
+    click me
+  </view>
+  <view wx:for="{{array}}">{{item}}</view>
+  <view wx:if="{{view=='WEBVIEW'}}">WEBVIEW</view>
+  <view wx:elif="{{view=='App'}}">APP</view>
+  <view wx:else="{{view=='MINA'}}">MINA</view>
+  <template name="staffName">
+    <view>
+      FirstName: {{firstName}}, LastName: {{lastName}}
+    </view>
+  </template>
+  <template is="staffName" data="{{...staffA}}"></template>
+  <template is="staffName" data="{{...staffB}}"></template>
+  <template is="staffName" data="{{...staffC}}"></template>
+  <view id="item-{{id}}">{{count}}</view>
+  <view bindtap="add">count add</view>
+  <checkbox checked="{{false}}"></checkbox>
+  <checkbox checked="{{true}}"></checkbox>
+  <view hidden="{{flag?true:false}}">hidden</view>
+  <view>{{"hello"+view}}</view>
+  <view>{{a+b}}+{{c}}+d</view>
+  <view>{{staffA.firstName}} {{array[0]}}</view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  </view>

@@ -1,0 +1,11 @@
+<view class="wrp">
+  <view class="section">
+    <button bindtap="wxGetLocation">wx.getLocation(OBJECT)</button>
+  </view>
+  <view class="section">
+    <button bindtap="wxOpenLocation">wx.openLocation(OBJECT)</button>
+  </view>
+  <view class="section">
+  <navigator url="createMapContext" open-type="navigate">wx.createMapContext(mapId) ——> </navigator>
+  </view>
+</view>

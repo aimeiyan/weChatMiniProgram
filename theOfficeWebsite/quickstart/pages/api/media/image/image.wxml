@@ -1,0 +1,8 @@
+<view class="wrp">
+  <button bindtap="chooseImage">wx.chooseImage(OBJECT)
+</button>
+  <button bindtap="previewImage">wx.previewImage(OBJECT)
+</button>
+  <button bindtap="getImageInfo">wx.getImageInfo(OBJECT)
+</button>
+</view>

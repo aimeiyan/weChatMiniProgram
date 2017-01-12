@@ -1,0 +1,79 @@
+/**app.wxss**/
+
+.container {
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.f-s-40 {
+  font-size: 80rpx;
+}
+
+.f-s-20 {
+  font-size: 40rpx;
+}
+
+.f-s-18 {
+  font-size: 36rpx;
+}
+
+.f-s-17 {
+  font-size: 34rpx;
+}
+
+.f-s-15 {
+  font-size: 30rpx;
+}
+
+.f-s-14 {
+  font-size: 28rpx;
+}
+
+.f-s-13 {
+  font-size: 26rpx;
+}
+
+.f-s-11 {
+  font-size: 22rpx;
+}
+
+.m-t-2 {
+  margin-top: 4rpx;
+}
+
+.m-t-5 {
+  margin-top: 10rpx;
+}
+
+.m-t-10 {
+  margin-top: 20rpx;
+}
+
+.m-t-20 {
+  margin-top: 40rpx;
+}
+
+.m-r-10 {
+  margin-right: 20rpx;
+}
+
+.p-l-5 {
+  padding-left: 10rpx;
+}
+
+.p-l-10 {
+  padding-left: 20rpx;
+}
+
+.p-l-15 {
+  padding-left: 30rpx;
+}
+
+.p-r-15 {
+  padding-right: 30rpx;
+}
+
+.f-flex {
+  display: flex;
+  justify-content: space-between;
+}

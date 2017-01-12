@@ -1,0 +1,57 @@
+<view class="container">
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="special-column column">
+    <text class="f-s-17">专栏</text>
+    <view class="wrp">
+      <view class="left item">
+        <image src="/resource/images/banner/2.jpg"></image>
+      </view>
+      <view class="right item">
+        <view class="f-s-17">吴晓波频道新锐会员</view>
+        <view class="f-s-11 m-t-5">超超10万新锐中产在此共享知识</view>
+        <view class="f-s-11 m-t-10">
+          <text>已更新149期</text> |
+          <text>11.0W订阅</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <template name="latest">
+    <view class="wrp">
+      <view class="left item">
+        <image src="{{img}}"></image>
+      </view>
+      <view class="right item">
+        <view class="f-s-17">{{title}}</view>
+        <view class="f-s-11 m-t-5">{{subtitle}}</view>
+        <view class="f-s-11 m-t-10 f-flex">
+          <view class="f-flex">
+            <view class="m-r-10">
+              <text class="fa fa-plus"></text>
+              <text>{{listend}}</text>
+            </view>
+            <view>
+              <text class="fa fa-plus"></text>
+              <text>{{msg}}</text>
+            </view>
+          </view>
+          <view>{{date}}</view>
+        </view>
+      </view>
+    </view>
+  </template>
+  <view class="special-column latest m-t-10">
+    <text class="f-s-17">最新</text>
+    <block wx:for="{{latest}}">
+      <template is="latest" data="{{...item}}" />
+    </block>
+  </view>
+</view>

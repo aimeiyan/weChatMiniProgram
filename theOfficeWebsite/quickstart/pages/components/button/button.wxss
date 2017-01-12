@@ -1,0 +1,14 @@
+.button-hover{
+    background-color: red;
+}
+
+.other-button-hover{
+    background-color: blue;
+}
+
+button{
+    margin-bottom: 30px;
+}
+.view{
+    padding: 20px;
+}

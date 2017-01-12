@@ -1,0 +1,19 @@
+<view class="wrp">
+  <view class="section">
+    <button bindtap="networkRequest">wx.request</button>
+    <view class="info" hidden="{{flag?true:false}}">
+      <view>{{title}}</view>
+      <view>{{author}}</view>
+      <image src="{{image}}"></image>
+    </view>
+  </view>
+  <view class="section">
+    <button bindtap="wxUploadFile">wx.uploadFile</button>
+  </view>
+  <view class="section">
+    <button bindtap="wxDownloadFile">wx.downloadFile</button>
+  </view>
+  <view class="section">
+    <button bindtap="connectSocket">wx.connectSocket</button>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<view class="p-l-15 p-r-15">
+ <template name="newsList">
+  <view class="f-flex news-wrp">
+    <view class="icon">
+      <image mode="aspectFit" src="/resource/images/news_icon.jpg"></image>
+    </view>
+    <view class="item p-l-5">
+      <view class="title f-s-15">巴九灵</view>
+      <view class="text f-s-14 m-t-2">
+        {{content}}
+      </view>
+      <view class="date f-s-11 m-t-10">{{date}}</view>
+    </view>
+  </view>
+ </template>
+ <block wx:for="{{newList}}">
+ <template is="newsList" data="{{...item}}"></template>
+ </block>
+</view>

@@ -1,0 +1,20 @@
+<view class="wrp">
+  <view class="section">
+    <button bindtap="wxSetStorage">wx.setSocket(OBJECT)</button>
+  </view>
+  <view class="section">
+    <button bindtap="wxSetStorageSync">wx.setStorageSync(KEY,DATA)</button>
+  </view>
+  <view class="section">
+    <button bindtap="wxGetStorage">wx.getStorage(OBJECT)</button>
+  </view>
+  <view class="section">
+    <button bindtap="wxGetStorageInfo">wx.getStorageInfo(OBJECT)</button>
+  </view>
+    <view class="section">
+    <button bindtap="wxRemoveStorage">wx.removeStorage(OBJECT)</button>
+  </view>
+    <view class="section">
+    <button bindtap="wxClearStorage">wx.clearStorage()</button>
+  </view>
+</view>

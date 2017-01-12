@@ -1,0 +1,27 @@
+.bc_green{
+    background-color: greenyellow
+}
+
+.bc_red{
+    background-color: red
+}
+.bc_yellow{
+    background-color: yellow
+}
+.bc_blue{
+    background-color: blue
+}
+.scroll-view-item{
+    height: 100px;
+}
+
+.scroll-view_H{
+    width: 100%;
+      display: flex;
+      white-space: nowrap;
+}
+.scroll-view-item_H{
+    display: inline-block;
+    width:200px;
+    height: 100px;
+}

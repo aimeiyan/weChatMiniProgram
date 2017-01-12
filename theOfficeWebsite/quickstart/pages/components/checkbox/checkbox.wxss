@@ -1,0 +1,4 @@
+/* pages/components/checkbox/checkbox.wxss */
+.checkbox{
+    display: block;
+}

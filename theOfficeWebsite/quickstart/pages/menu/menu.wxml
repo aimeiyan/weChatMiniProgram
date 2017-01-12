@@ -1,0 +1,26 @@
+
+<!--index.wxml-->
+<view>{{text}}</view>
+<button bindtap="changeText"> Change normal data </button>
+<view>{{array[0].text}}</view>
+<button bindtap="changeItemInArray"> Change Array data </button>
+<view>{{object.text}}</view>
+<button bindtap="changeItemInObject"> Change Object data </button>
+<view>{{newField.text}}</view>
+<button bindtap="addNewField"> Add new data </button>
+<view>event:</view>
+<view id="tapTest" data-hi="WeChat" bindtap="tapName">Click me!</view>
+<import src="item.wxml" />
+<template is="item" data="{{text:'forbar'}}" />
+<include src="header.wxml" />
+<view>body</view>
+<include src="footer.wxml" />
+<view class="section">
+  <view>flex-direction:row</view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <!--<view class="flex-wrp" style="height:300px;flex-direction:column;">-->
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+</view>

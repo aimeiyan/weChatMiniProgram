@@ -1,0 +1,7 @@
+<view class="wrp">
+  <button bindtap="saveFile">wx.saveFile</button>
+  <button bindtap="getSavedFileList">wx.getSavedFileList(OBJECT)</button>
+  <button bindtap="getSavedFileInfo">wx.getSavedFileInfo(OBJECT)</button>
+  <button bindtap="removeSavedFile">wx.removeSavedFile(OBJECT)</button>
+  <button bindtap="openDocument">wx.openDocument(OBJECT)</button>
+</view>

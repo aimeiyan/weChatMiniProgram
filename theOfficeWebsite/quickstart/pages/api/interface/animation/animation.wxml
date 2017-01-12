@@ -1,0 +1,4 @@
+<button bindtap="rotateAndScale">rotateAndScale</button>
+<button bindtap="rotateThenScale">rotateAndScale</button>
+<button bindtap="rotateAndScaleThenTranslate">rotateAndScale</button>
+<view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx"></view>

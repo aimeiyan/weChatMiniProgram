@@ -1,0 +1,5 @@
+<view class="body-view">
+<switch type="switch" checked bindchange="switch1Change"/>
+<switch type="switch" bindchange="switch2Change"/>
+<switch type="checkbox" bindchange="checkboxChange"/>
+</view>

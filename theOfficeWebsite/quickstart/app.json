@@ -1,0 +1,109 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/content/content",
+    "pages/documention/documention",
+    "pages/menu/menu",
+    "pages/logs/logs",
+    "pages/components/components",
+    "pages/components/scroll-view/scroll-view",
+    "pages/components/swiper/swiper",
+    "pages/components/navigator/navigator",
+    "pages/components/navigator/example",
+    "pages/components/navigator/redirect",
+    "pages/components/progress/progress",
+    "pages/components/icon/icon",
+    "pages/components/text/text",
+    "pages/components/button/button",
+    "pages/components/checkbox/checkbox",
+    "pages/components/form/form",
+    "pages/components/input/input",
+    "pages/components/switch/switch",
+    "pages/components/slider/slider",
+    "pages/components/radio/radio",
+    "pages/components/picker/picker",
+    "pages/components/picker-view/picker-view",
+    "pages/components/textarea/textarea",
+    "pages/components/label/label",
+    "pages/components/image/image",
+    "pages/components/audio/audio",
+    "pages/components/video/video",
+    "pages/components/map/map",
+    "pages/components/canvas/canvas",
+    "pages/components/contact-button/contact-button",
+    "pages/api/api",
+    "pages/api/network/network",
+    "pages/api/storage/storage",
+    "pages/api/location/location",
+    "pages/api/location/createMapContext",
+    "pages/api/device/device",
+    "pages/api/interface/interface",
+    "pages/api/interface/modal/modal",
+    "pages/api/interface/navTo/navTo",
+    "pages/api/interface/setNav/setNav",
+    "pages/api/interface/animation/animation",
+    "pages/api/interface/canvas/canvas",
+    "pages/api/interface/pullDownRefresh/pullDownRefresh",
+    "pages/api/media/media",
+    "pages/api/media/image/image",
+    "pages/api/media/record/record",
+    "pages/api/media/controlVoice/controlVoice",
+    "pages/api/media/controlAudio/controlAudio",
+    "pages/api/media/controlAudioContext/controlAudioContext",
+    "pages/api/media/video/video",
+    "pages/api/media/controlVideoContext/controlVideoContext",
+    "pages/api/file/file"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#eee",
+    "navigationBarBackgroundColor": "#0066ed",
+    "navigationBarTitleText": "demo",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "green",
+    "backgroundColor": "#f0f0f0",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/iconPath/1.png",
+        "selectedIconPath": "images/iconPath/6.png"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "菜单",
+        "iconPath": "images/iconPath/2.png",
+        "selectedIconPath": "images/iconPath/6.png"
+      },
+      {
+        "pagePath": "pages/content/content",
+        "text": "内容",
+        "iconPath": "images/iconPath/3.png",
+        "selectedIconPath": "images/iconPath/6.png"
+      },
+      {
+        "pagePath": "pages/documention/documention",
+        "text": "文档",
+        "iconPath": "images/iconPath/4.png",
+        "selectedIconPath": "images/iconPath/6.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "images/iconPath/5.png",
+        "selectedIconPath": "images/iconPath/6.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

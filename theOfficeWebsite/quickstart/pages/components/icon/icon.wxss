@@ -1,0 +1,4 @@
+/* pages/components/icon/icon.wxss */
+.group{
+    margin-bottom: 30px;
+}

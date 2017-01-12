@@ -1,0 +1,18 @@
+<view class="wrp">
+  <view class="section">
+    <text>显示消息提示框</text>
+    <button bindtap="wxShowToast">wx.showToast(OBJECT)</button>
+  </view>
+  <view class="section">
+    <text>隐藏消息提示框</text>
+    <button bindtap="wxHideToast">wx.hideToast()</button>
+  </view>
+  <view class="section">
+    <text>​显示模态弹窗</text>
+    <button bindtap="wxShowModal">wx.showModal(OBJECT)</button>
+  </view>
+  <view class="section">
+    <text>显示操作菜单</text>
+    <button bindtap="wxShowActionSheet">wx.showActionSheet(OBJECT)</button>
+  </view>
+</view>

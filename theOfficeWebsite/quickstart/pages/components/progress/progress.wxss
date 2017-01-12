@@ -1,0 +1,4 @@
+/* pages/components/progress/progress.wxss */
+progress{
+    margin-bottom: 30px;
+}

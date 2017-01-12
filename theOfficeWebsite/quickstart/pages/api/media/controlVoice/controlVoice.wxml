@@ -1,0 +1,8 @@
+<view class="wrp">
+  <button bindtap="playVoice">wx.playVoice(OBJECT)
+  </button>
+  <button bindtap="pauseVoice">wx.pauseVoice()
+  </button>
+  <button bindtap="stopVoice">wx.stopVoice()
+  </button>
+</view>

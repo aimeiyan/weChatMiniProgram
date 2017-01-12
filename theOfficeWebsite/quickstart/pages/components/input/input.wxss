@@ -1,0 +1,15 @@
+/* pages/components/input/input.wxss */
+.container{
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.section{
+    margin-bottom: 20px;
+}
+
+input{
+    border: 1px solid skyblue;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
