@@ -1,2 +1,16 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view>
+  <view class="userInfo">
+    <image src="{{userInfo.avatarUrl}}" class="userInfo-avatar"></image>
+    <text class="userInfo-nickName">{{userInfo.nickName}}</text>
+  </view>
+  <view>
+    <navigator url="mySource/mySource" class="link">
+      <text class="text f-s-14">我的资源</text>
+      <image class="arrow" src="/resource/images/arrowright.png"></image>
+    </navigator>
+    <navigator url="feedback/feedback" class="link">
+      <text class="text f-s-14">意见反馈</text>
+      <image class="arrow" src="/resource/images/arrowright.png"></image>
+    </navigator>
+  </view>
+</view>

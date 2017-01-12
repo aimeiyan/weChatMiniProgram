@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/news/news",
     "pages/my/my",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/my/mySource/mySource",
+    "pages/my/feedback/feedback"
   ],
   "window": {
     "backgroundTextStyle": "light",
