@@ -1,0 +1,5 @@
+<canvas canvas-id="myCanvas1" />
+<canvas canvas-id="myCanvas2" bindtouchstart="start" bindtouchmove="move" bindtouchend="end" />
+<view hidden="{{hidden}}">
+  Coordinates:({{x}},{{y}})
+</view>

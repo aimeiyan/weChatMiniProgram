@@ -30,6 +30,10 @@ Page({
     {
       name: "文件",
       pageName: "file"
+    },
+    {
+      name: "绘图",
+      pageName: "canvas"
     }],
     numberArray: [1, 2, 3, 4]
   },

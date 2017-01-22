@@ -52,7 +52,8 @@
     "pages/api/media/controlAudioContext/controlAudioContext",
     "pages/api/media/video/video",
     "pages/api/media/controlVideoContext/controlVideoContext",
-    "pages/api/file/file"
+    "pages/api/file/file",
+    "pages/api/canvas/canvas"
   ],
   "window": {
     "backgroundTextStyle": "dark",
