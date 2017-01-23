@@ -1,0 +1,19 @@
+<view class="container-frame" catchtap="onScreenTap">
+  <view class="index-container">
+    <view class="index-item-container">
+      <view class="index-item-data-container">
+        <text>上证指数</text>
+      </view>
+    </view>
+    <view class="index-item-container">
+      <view class="index-item-data-container">
+        <text>上证指数</text>
+      </view>
+    </view>
+    <view class="index-item-container">
+      <view class="index-item-data-container">
+        <text>上证指数</text>
+      </view>
+    </view>
+  </view>
+</view>
