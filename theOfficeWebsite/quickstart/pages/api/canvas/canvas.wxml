@@ -3,3 +3,12 @@
 <view hidden="{{hidden}}">
   Coordinates:({{x}},{{y}})
 </view>
+<canvas canvas-id="myCanvas3" />
+<view class="export-img">
+  <canvas canvas-id="myCanvas4" />
+  <button bindtap="exportImg">导出图片</button>
+</view>
+
+  <canvas canvas-id="myCanvas5" />
+
+  <canvas canvas-id="myCanvas6" style="border: 1px solid; background: green;"/>

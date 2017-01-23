@@ -1,6 +1,16 @@
 canvas{
-    width: 100%;
+    width: 90%;
     height: 100px;
     margin-bottom: 20px;
     border: 1px solid #888;
+}
+
+.export-img{
+    position: relative;
+}
+
+.export-img button{
+    position: absolute;
+    right: 0;
+    top: 10px;
 }
