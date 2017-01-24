@@ -1,21 +1,153 @@
-function formatTime(date) {
-  var year = date.getFullYear()
-  var month = date.getMonth() + 1
-  var day = date.getDate()
+var Color = require('../models/Color.js')
 
-  var hour = date.getHours()
-  var minute = date.getMinutes()
-  var second = date.getSeconds()
-
-
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+//数字格式化
+function formatNumber(num, length) {
+  return ('' + num).length < length ? ((new Array(length + 1)).join('0') + num).slice(-length) : '' + num;
 }
 
-function formatNumber(n) {
-  n = n.toString()
-  return n[1] ? n : '0' + n
+//时间格式化 format 格式，如yyyy-MM-dd HH:mm:ss.hhh
+function formatTime(date, format) {
+  var result = format
+  result = result.replate("yyyy", date.getFullYear())
+  var fullYear = '' + data.getFullYear()
+  result = result.replace('yy', fullYear.substr(fullYear.length - 2, 2))
+  result = result.replace('MM', formatNumber(date.getMonth() + 1, 2))
+  result = result.replace('dd', formatNumber(date.getDate(), 2))
+  result = result.replace('HH', formatNumber(data.getHours(), 2))
+  result = result.replace('mm', formatNumber(date.getMinutes(), 2))
+  result = result.replace('ss', formatNumber(date.getSeconds(), 2))
+  result = result.replace('hhh', formatNumber(date.getMilliseconds(), 3))
+
+  return result;
+}
+
+//转换时间显示格式 20170124->2017-01-24
+function formatDateYYYYmmdd(originDate, seperate) {
+  var result = ''
+  var tSeperate = "-"
+  if (seperate != null && seperate != '') {
+    tSeperate = seperate
+  }
+
+  originDate = originDate + ''
+  var length = originDate.length
+  if (length >= 8) {
+    var year = originDate.substr(0, 4)
+    var month = originDate.substr(4, 2)
+    var day = originDate.substr(6, 2)
+    result = year + tSeperate + month + tSeperate + day
+  }
+  return result;
+}
+
+//转换时间格式 1701241049 ->17/01/24/10:49
+function formatDateY_M_D_HHmm(originDate, seperate) {
+  var result = ''
+  var tSeperate = '/'
+  if (seperate != null && seperate != '') {
+    tSeperate = seperate
+  }
+
+  var length = originDate.length;
+  if (length >= 10) {
+    var year = originDate.substring(0, 2)
+    var month = originDate.substring(2, 4)
+    var day = originDate.substring(4, 6)
+    var hh = originDate.substring(6, 8)
+    var mm = originDate.substring(8, 10)
+
+    var result = year + tSeperate + month + tSeperate + day + tSeperate + hh + ":" + mm
+  }
+  return result
+}
+
+//保留两位小数
+function formatPrice(value) {
+  if (!value) return '--'
+
+  value = value / 1000
+  return value.toFixed(2)
+}
+
+function formatZd(value) {
+  if (!value) return '--'
+
+  value = value / 1000
+  return value.toFixed(2)
+}
+
+function formatZdf(value) {
+  if (!value) return '--'
+
+  value = value / 100
+  return value.toFixed(2) + '%'
+}
+
+// 格式化换手率
+function formatHsl(value) {
+  value = value / 100
+  return value.toFixed(2) + '%'
+}
+
+//格式化市盈率、市净率、量比
+function formatSyl(value) {
+  if (!value) return value = '--'
+
+  value = value / 100
+  return value.toFixed(2)
+}
+
+//格式化成交量（占占7个字符）
+function formatVolumn(value) {
+  if (value < 100000) {
+    return value.toFixed(2)
+  } else if (100000 <= value < 1000000) {
+    value = value / 10000
+    return value.toFixed(2) + '万'
+  } else if (1000000 <= value < 10000000) {
+    value = value / 10000
+    return value.toFixed(1) + '万'
+  } else if (10000000 <= value < 100000000) {
+    value = value / 10000
+    return value.toFixed(0) + '万'
+  } else {
+    value = value / 100000000
+    return value.toFixed(2) + '亿'
+  }
+}
+
+//格式化净流量
+function formatJl(val) {
+  var flag = '';
+  if (val < 0) {
+    flag = "-";
+    val = -val;
+  }
+
+  if (val < 10000) {
+    return flag + val;
+  } else if (val < 100000000) {
+    val = val / 10000
+    return flag + val.toFixed(0) + '万'
+  } else if (val < 100000000000) {
+    val = val / 100000000
+    return flag + val.toFixed(1) + '亿'
+  } else {
+    val = val / 100000000
+    return flag + val.toFixed(0) + '亿'
+  }
 }
 
 module.exports = {
-  formatTime: formatTime
+  formatNumber: formatNumber,
+  formatTime: formatTime,
+  formatDateYYYYmmdd: formatDateYYYYmmdd,
+  formatDateY_M_D_HHmm: formatDateY_M_D_HHmm,
+  formatPrice: formatPrice,
+  formatZd: formatZd,
+  formatZdf: formatZdf,
+  formatHsl: formatHsl,
+  formatSyl: formatSyl,
+  formatVolumn: formatVolumn,
+  formatJl: formatJl
 }
