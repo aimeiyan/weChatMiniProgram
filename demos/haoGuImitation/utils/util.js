@@ -8,12 +8,12 @@ function formatNumber(num, length) {
 //时间格式化 format 格式，如yyyy-MM-dd HH:mm:ss.hhh
 function formatTime(date, format) {
   var result = format
-  result = result.replate("yyyy", date.getFullYear())
-  var fullYear = '' + data.getFullYear()
+  result = result.replace("yyyy", date.getFullYear())
+  var fullYear = '' + date.getFullYear()
   result = result.replace('yy', fullYear.substr(fullYear.length - 2, 2))
   result = result.replace('MM', formatNumber(date.getMonth() + 1, 2))
   result = result.replace('dd', formatNumber(date.getDate(), 2))
-  result = result.replace('HH', formatNumber(data.getHours(), 2))
+  result = result.replace('HH', formatNumber(date.getHours(), 2))
   result = result.replace('mm', formatNumber(date.getMinutes(), 2))
   result = result.replace('ss', formatNumber(date.getSeconds(), 2))
   result = result.replace('hhh', formatNumber(date.getMilliseconds(), 3))
@@ -22,6 +22,7 @@ function formatTime(date, format) {
 }
 
 //转换时间显示格式 20170124->2017-01-24
+
 function formatDateYYYYmmdd(originDate, seperate) {
   var result = ''
   var tSeperate = "-"
@@ -138,6 +139,48 @@ function formatJl(val) {
   }
 }
 
+
+//格式化总值（最多占7个字符的位置，如1001.9万，30.00亿、300.0亿）
+function formatAmount(val) {
+  var flag = "";
+  if (val < 0) {
+    flag = "-1";
+    val = -val;
+  }
+
+  if (val < 100000) {  //<10万
+    return flag + val.toFixed(0)    //返回至最多占5个字符
+  } else if (val >= 100000 && val < 1000000) {  // 10万到100万
+    val = val / 10000;
+    return flag + val.toFixed(2) + "万";  //返回至最多占6个字符
+  } else if (val >= 1000000 && val < 10000000) {   //100万到1000万
+    val = val / 10000;
+    return flag + val.toFixed(1) + "万"  //返回至最多占6个字符
+  } else if (val >= 10000000 && val < 100000000) {  //1000万到1亿
+    val = val / 10000;
+    return flag + val.foFixed(1) + "万"
+  } else if (val >= 100000000 && val < 1000000000) {  //1亿到10亿
+    val = val / 100000000;
+    return flag + val.toFixed(2) + "亿";
+  } else if (val >= 1000000000 && val < 10000000000) { //10亿到100亿
+    val = val / 100000000;
+    return flag + val.toFixed(2) + "亿";
+  } else {
+    val = val / 100000000;
+    return flag + val.toFixed(1) + "亿"
+  }
+
+}
+
+//获取不同的颜色值
+function getColorByZd(zd){
+  if(zd>=0){
+    return Color.c1
+  }else{
+    return Color.c2
+  }
+}
+
 module.exports = {
   formatNumber: formatNumber,
   formatTime: formatTime,
@@ -149,5 +192,7 @@ module.exports = {
   formatHsl: formatHsl,
   formatSyl: formatSyl,
   formatVolumn: formatVolumn,
-  formatJl: formatJl
+  formatJl: formatJl,
+  formatAmount: formatAmount,
+  getColorByZd:getColorByZd
 }

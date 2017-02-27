@@ -1,0 +1,44 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<script>
+			function formatAmount(val) {
+
+  var flag = "";
+  if (val < 0) {
+    flag = "-1";
+    val = -val;
+  }
+
+  if (val < 100000) {  //<10万
+    return flag + val.toFixed(0)    //返回至最多占5个字符
+  } else if (100000 <= val < 1000000) {  // 10万到100万
+    val = val / 10000;
+    return flag + val.toFixed(2) + "万";  //返回至最多占6个字符
+  } else if (1000000 <= val < 10000000) {   //100万到1000万
+    val = val / 10000;
+    return flag + val.toFixed(1) + "万"  //返回至最多占6个字符
+  } else if (10000000 <= val < 100000000) {  //1000万到1亿
+    val = val / 10000;
+    return flag + val.foFixed(1) + "万"
+  } else if (100000000 <= val < 1000000000) {  //1亿到10亿
+  	console.log("亿万亿万--");
+    val = val / 100000000;
+    return flag + val.toFixed(2) + "亿";
+  } else if (1000000000 <= val < 10000000000) { //10亿到100亿
+    val = val / 100000000;
+    return flag + val.toFixed(2) + "亿";
+  } else {
+    val = val / 100000000;
+    return flag + val.toFixed(1) + "亿"
+  }
+
+}
+
+console.log(formatAmount(1000000000),"----------++++++");
+
+		</script>
+	</body>
+</html>

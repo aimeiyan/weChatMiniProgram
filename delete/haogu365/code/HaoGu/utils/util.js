@@ -164,7 +164,7 @@ function formatJl(val) {
     }
 }
 
-// 格式化总值
+// 格式化总值（最多占6字符的位置）
 function formatAmount(val) {
     var flag = ''
     if (val < 0) {
