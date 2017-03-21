@@ -1,5 +1,5 @@
 module.exports = function (target) {
-    //We must check against these specific cases
+    //We must check against these specific cases.
     if (target === undefined || target === null) {
         throw new TypeError('Cannot convert undefined or null to object');
     }
