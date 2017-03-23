@@ -5,7 +5,7 @@ let StaticStrings = require('../utils/StaticStrings.js')
 // let BaseUrl = "http://192.168.3.51:8094/?X-Protocol-Id="    // 邬  K线
 // let BaseUrl = "http://120.55.169.35:1121/?X-Protocol-Id="    // 郭磊  K线
 // let BaseUrl = "http://192.168.8.189:2368/?X-Protocol-Id="      // 郭磊   个股新闻
-//let BaseUrl = "http://192.168.8.189:1122/?X-Protocol-Id="    // 邬  股票行情
+// let BaseUrl = "http://192.168.8.189:1122/?X-Protocol-Id="    // 邬  股票行情
 // var TranferUrl = "https://mobiletest.emoney.cn/wxapp/transfer"
 // let BaseOptionalUrl = "http://192.168.8.189:1131/?X-Protocol-Id="   // 男神   自选股
 
@@ -34,6 +34,7 @@ function request(options) {
         }
 
         opts.fail = function (res) {
+            // console.log("====request fail:", opts.url, res)
             opts.showFailMsg && wx.showToast({
                 title: '请求失败',
                 icon: 'warn',
@@ -48,13 +49,76 @@ function request(options) {
         }
 
         opts.showLoading && wx.showToast({
-            title:'加载中',
-            icon:'loading',
-            duration:100000
+            title: '加载中',
+            icon: 'loading',
+            duration: 100000
         })
         wx.request(opts);
     })
 
     return promise
 
+}
+
+function requestOfTag(options, tag) {
+    var opts = assign({
+        method: 'POST',
+        header: {
+            //'X-Protocol-Id':'20400',
+            'X-Request-Id': '2016-12-15',
+            'Content-Type': 'application/json'
+        },
+        showLoading: true,
+        showFailMsg: true
+    }, options);
+
+    var promise = new Promise(function (resolve, reject) {
+        var tempTag = tag;
+        opts.success = function (res) {
+            resolve({ res_tag: tempTag, res_data: res });
+        }
+
+        opts.fail = function (res) {
+            opts.showFailMsg && wx.showToast({
+                title: '请求失败',
+                icon: 'warn',
+                duration: 10000
+            })
+            reject(res);
+        }
+
+        opts.complete = function (res) {
+            opts.showLoading && wx.hideToast();
+            // typeof options.complete === 'function' && options.complete(res);
+        };
+
+        opts.showLoading && wx.showToast({
+            title: '加载中',
+            icon: 'loading',
+            duration: 100000
+        });
+        wx.request(opts);
+    })
+
+    return promise;
+
+}
+
+function assign(target, source) {
+    for (var param in source) {
+        target[param] = source[param]
+    }
+    return target
+}
+
+module.exports = {
+    request: request,
+    Promise: Promise,
+    StaticStrings: StaticStrings,
+    BaseUrl: BaseUrl,
+    BaseInfoUrl: BaseInfoUrl,
+    BaseQuotaUrl: BaseQuotaUrl,
+    BaseHaoGuUrl: BaseHaoGuUrl,
+    BaseOptionalUrl: BaseOptionalUrl,
+    requestOfTag: requestOfTag
 }
