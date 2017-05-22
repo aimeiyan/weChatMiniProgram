@@ -1,36 +1,33 @@
-//板块信息
-function BKInfo(id, code, bkName, goodsName, zxj, zdf, zdfDisplay) {
+function BKInfo(id,code, bkName, goodsName, zxj, zdf,zdfDisplay) {
     this.id = id;
-    this.code = code;
+    this.code=code;
     this.bkName = bkName;
     this.goodsName = goodsName;
     this.zxj = zxj;
     this.zdf = zdf;
-    this.zdfDisplay = zdfDisplay;
+    this.zdfDisplay=zdfDisplay;
     this.toString = function () {
-        return id + ', ' + bkName + ', ' + goodsName + ', ' + zxj + ', ' + zdf + ', ' + zdfDisplay + '\n';
+        return id + ', ' + bkName + ', ' + goodsName + ', ' + zxj + ', ' + zdf + ','+zdfDisplay+'\n'
     }
-
 }
 
-//股票信息
-function Goods(id,code,name,price,zdf,zdfDisplay,time,timeDisplay,suspension){
+function Goods(id,code, name, price, zdf, zdfDisplay, time,timeDisplay,suspension) {
     this.id=id;
-    this.code=code;
-    this.name=name;
-    this.price=price;
-    this.zdf=zdf;
-    this.zdfDisplay=zdfDisplay;
-    this.time=time;
+    this.code = code;
+    this.name = name;
+    this.price = price;
+    this.zdf = zdf;
+    this.zdfDisplay = zdfDisplay;
+    this.time = time;
     this.timeDisplay=timeDisplay;
     this.suspension=suspension;
-    this.toString=function(){
-        return id+', '+code+', '+name+', '+price+', '+zdf+', '+zdfDisplay+', '+time+', '+suspension+'\n';
+    this.toString = function () {
+        return id+','+code + ', ' + name + ', ' + price + ', ' + zdf + ',' + zdfDisplay + ', ' + time + ','+suspension+'\n'
     }
 }
 
-
-module.exports={
-    BKInfo:BKInfo,
-    Goods:Goods
+module.exports = {
+    BKInfo: BKInfo,
+    Goods: Goods
 }
+

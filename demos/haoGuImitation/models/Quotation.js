@@ -1,3 +1,4 @@
+
 function Quotation(price, zd, zdf, open, high, low, hsl, syl, sjl, cjl, jl, zz, cje, lb, ltsz, date, time, color, goodsId) {
 	this.price = price, 
 	this.zd = zd, 

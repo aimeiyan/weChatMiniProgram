@@ -1,4 +1,5 @@
-var Api = require('../api/api.js');
+
+var Api = require('../api/api.js')
 
 var Service = require('../api/service.js')
 var Promise = Service.Promise
@@ -9,23 +10,26 @@ var newsUtil = require('newsUtil.js')
 function getUid(app) {
     wx.login({
         success: function (res) {
-            //success
-            console.log("login success", res);
-            var code = res.code;
-            getUserId(code, "", "");
+            // success
+            console.log("login sucesss", res)
+            var code = res.code
+
+            getUserId(code, "", "")
 
             // wx.getUserInfo({
-            //   success: function(res){
-            //     // success
-            //     console.log("=======userinfo",res);
-            //     getUserId(code,res.encryptedData,res.iv)
-            //   },
-            //   fail: function() {
-            //     // fail
-            //   },
-            //   complete: function() {
-            //     // complete
-            //   }
+            //     success: function (res) {
+            //         // success
+            //         console.log("========userinfo", res)
+
+            //         getUserId(code, res.encryptedData, res.iv)
+            //     },
+            //     fail: function () {
+            //         // fail
+            //         console.log("get user info fail")
+            //     },
+            //     complete: function () {
+            //         // complete
+            //     }
             // })
 
             // wx.request({
@@ -37,67 +41,58 @@ function getUid(app) {
             //         grant_type: "authorization_code"
             //     },
             //     method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-            //     // header: {}, // 设置请求的 header
             //     success: function (res) {
-            //         // success
             //         console.log("=======truususususuususussuussu====res", res)
             //         app.globalData.uid = res.data.uid
             //         requestOptionals()
             //         loadReadNews()
             //     },
-            //     fail: function () {
-            //         // fail
+            //     fail: function (res) {
             //         console.log("get uid fail", res)
-
             //     },
             //     complete: function () {
-            //         // complete
+
             //     }
             // })
         },
         fail: function (res) {
-            console.log("login fail", res);
-        },
-        complete: function () {
-            //complete
-        }
-    })
-}
-
-function getUserId(code, encryptedData, iv) {
-    wx.request({
-        url: 'https://wxapp.emoney.cn/haogu365/web/user/getid',
-        data: {
-            jsCode: code,
-            encryptedData: encryptedData,
-            iv: iv
-        },
-        method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        // header: {}, // 设置请求的 header
-        success: function (res) {
-            // success
-            console.log("===========get user id success=res", res)
-
-            if (res.statusCode == 200) {
-                if (res.data.result.code == 0) {
-                    getApp().globalData.uid = res.data.detail;
-                    requestOptionals();
-                    loadReadNews();
-                } else {
-                    console.log("======获取uid失败", res)
-                }
-            } else {
-                console.log("======获取uid失败", res);
-            }
-
-        },
-        fail: function () {
             // fail
-            console.log("=========获取UID失败", res)
+            console.log("login fail", res)
         },
         complete: function () {
             // complete
         }
+    })
+}
+
+
+function getUserId(code, encrytedData, iv) {
+    wx.request({
+        url: 'https://wxapp.emoney.cn/haogu365/web/user/getid',
+        data: {
+            jsCode: code,
+            encryptedData: encrytedData,
+            iv: iv
+        },
+        method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        success: function (res) {
+            console.log("===============get user id sucess=res", res)
+
+            if (res.statusCode == 200) {
+                if (res.data.result.code == 0) {
+                    getApp().globalData.uid = res.data.detail
+                    requestOptionals()
+                    loadReadNews()
+                } else {
+                    console.log("=========获取UID失败", res)
+                }
+            } else {
+                console.log("=========获取UID失败", res)
+            }
+        },
+        fail: function (res) {
+            console.log("=========获取UID失败", res)
+        },
     })
 }
 
@@ -108,4 +103,28 @@ function getNetWorkType() {
             getApp().globalData.netWorkType = res.networkType
         }
     })
+}
+
+function requestOptionals() {
+    Api.stock.requestOptionals({
+
+    }).then(function (res) {
+        for (let i = 0; i < res.GoodsId.length; i++) {
+            if (typeof (res.GoodsId[i]) == 'number') {
+                getApp().globalData.optionals.push(res.GoodsId[i])
+            }
+        }
+
+    }, function (res) {
+
+    })
+}
+
+function loadReadNews() {
+    newsUtil.loadReadNews()
+}
+
+module.exports = {
+    getUid: getUid,
+    getNetWorkType: getNetWorkType,
 }

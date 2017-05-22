@@ -1,6 +1,8 @@
-//判断日期是否为今天 date
+
+// 判断日期是否为的今天 date
 Date.prototype.today = function (date) {
     if (this != undefined && this.constructor == Date) {
+
         if (date == undefined) {
             date = new Date()
         }
@@ -13,9 +15,10 @@ Date.prototype.today = function (date) {
     }
 }
 
-//判断日期是否为今年 date
+// 判断日期是否为的今年 date
 Date.prototype.thisYear = function (date) {
     if (this != undefined && this.constructor == Date) {
+
         if (date == undefined) {
             date = new Date()
         }

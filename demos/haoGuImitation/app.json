@@ -2,17 +2,23 @@
   "pages": [
     "pages/optional/optional",
     "pages/kanpan/kanpan",
-    "pages/haogu/haogu"
+    "pages/haogu/haogu",
+    "pages/search/search",
+    "pages/stock/stock",
+    "pages/newsdetail/newsdetail",
+    "pages/index/index",
+    "pages/bk/bk",
+    "pages/fund/fund"
   ],
   "window": {
-    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#37383b",
     "navigationBarTitleText": "好股365",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
-    "color":"#7a7d82",
-    "selectedColor":"#ef333b",
+    "color": "#7a7d82",
+    "selectedColor": "#ef333b",
     "list": [
       {
         "pagePath": "pages/optional/optional",
@@ -32,10 +38,10 @@
         "iconPath": "images/tab_haogu_nor.png",
         "selectedIconPath": "images/tab_haogu_sel.png"
       }
-    ],
-    "networkTimeout": {
-      "request": 10000,
-      "downloadFile": 10000
-    }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
   }
 }

@@ -1,4 +1,4 @@
-//判断是不是自选股
+// 判断是不是自选股
 function isOptional(goodsId) {
     if (getApp().globalData.optionals.indexOf(goodsId) > -1) {
         return true;
@@ -7,23 +7,25 @@ function isOptional(goodsId) {
     }
 }
 
-//更新自选股
+// 更新自选股
 function updateOptional(goodsId) {
     if (isOptional(goodsId)) {
-        getApp().globalData.optionals.removeObject(goodsId);
+        getApp().globalData.optionals.removeObject(goodsId)
     } else {
-        if (typeof (goodsId) == "number") {
-            getApp().globalData.optinals.unshift(goodsId);
+
+        if (typeof (goodsId) == 'number') {
+            getApp().globalData.optionals.unshift(goodsId)
         } else {
             console.log("========自选股ID类型不对")
         }
     }
 }
 
+// 
 function tempOptionals(goodsId) {
-    var optionals = [];
+    var optionals = []
     for (let i = 0; i < getApp().globalData.optionals.length; i++) {
-        optionals.push(getApp().globalData.optionals[i]);
+        optionals.push(getApp().globalData.optionals[i])
     }
 
     if (goodsId < 0) {
@@ -31,10 +33,11 @@ function tempOptionals(goodsId) {
     }
 
     if (isOptional(goodsId)) {
-        optionals.removeObject(goodsId);
+        optionals.removeObject(goodsId)
     } else {
-        optionals.unshift(goodsId);
+        optionals.unshift(goodsId)
     }
+
     return optionals
 }
 

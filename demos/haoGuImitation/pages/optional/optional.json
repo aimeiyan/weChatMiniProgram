@@ -1,1 +1,6 @@
-{}
+{
+    	"navigationBarBackgroundColor": "#36383C",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "自选",
+        "enablePullDownRefresh": true
+}

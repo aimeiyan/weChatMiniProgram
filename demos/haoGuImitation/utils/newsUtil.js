@@ -7,7 +7,7 @@ function updateReadNews(newsId) {
     var newsString = getApp().globalData.readNews.join(',')
     wx.setStorage({
         key: 'NewsReadList',
-        data: newsString
+        data: newsString,
     })
 }
 
@@ -19,16 +19,16 @@ function loadReadNews() {
             getApp().globalData.readNews = newsString.split(',')
         },
         fail: function () {
-            //fail
+            // fail
         },
         complete: function () {
-            //complete
+            // complete
         }
     })
 }
 
 function isNewsRead(newsId) {
-    var index = getApp().globalData.readNews.indexOf(newsId + "");
+    var index = getApp().globalData.readNews.indexOf(newsId + "")
     if (index >= 0) {
         return true
     } else {

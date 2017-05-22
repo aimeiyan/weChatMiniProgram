@@ -1,10 +1,12 @@
-var Util = require('../utils/util.js');
-var optionalUtil = require('../utils/optionalUtil.js');
+
+var Util = require('../utils/util.js')
+var optionalUtil = require('../utils/optionalUtil.js')
 
 function SearchItem(name, goodsId) {
-    this.name = name;
-    this.goodsId = goodsId;
-    this.code = Util.formateNumber(goodsId % 1000000, 6);
+
+    this.name = name
+    this.goodsId = goodsId
+    this.code = Util.formateNumber(goodsId % 1000000, 6)
 
     if (Util.isZS(goodsId)) {
         this.type = "指数"
@@ -26,7 +28,7 @@ function SearchItem(name, goodsId) {
 }
 
 SearchItem.prototype.setOptional = function (optional) {
-    this.optional = optional;
+    this.optional = optional
     if (this.optional) {
         this.optionPath = "../../images/icon_optional_del.png"
     } else {
@@ -34,4 +36,5 @@ SearchItem.prototype.setOptional = function (optional) {
     }
 }
 
-module.exports=SearchItem;
+
+module.exports = SearchItem
