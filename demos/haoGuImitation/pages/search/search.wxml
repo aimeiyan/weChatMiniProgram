@@ -1,2 +1,13 @@
 <!--pages/search/search.wxml-->
+<import src="../common/SearchBar/SearchBar.wxml" />
 <import src="../common/line.wxml" />
+
+<!--搜索框-->
+<view class="search_view B1">
+  <template is="SearchBar" data="{{searchData}}"></template>
+</view>
+
+ <!--列表-->
+ <block>
+    
+ </block>
