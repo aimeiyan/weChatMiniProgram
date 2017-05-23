@@ -1,6 +1,6 @@
 {
     	"navigationBarBackgroundColor": "#36383C",
-        "navigationBarTextStyle": "black",
+        "navigationBarTextStyle": "white",
         "navigationBarTitleText": "自选",
         "enablePullDownRefresh": true
 }

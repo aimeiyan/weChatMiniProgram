@@ -1,19 +1,32 @@
-<view class="container-frame" catchtap="onScreenTap">
-  <view class="index-container">
-    <view class="index-item-container">
-      <view class="index-item-data-container">
-        <text>上证指数</text>
+<import src="../common/line.wxml" />
+<view class="container-frame" catchtap="onscreenTap">
+
+  <!--指数头部-->
+  <view class="index_container">
+    <block wx:for="{{aryIndexs}}" wx:key="Id">
+      <view class="index_item_container" hover="true" hover-class="navigator-hover">
+        <view class="index_item_data_container" bindtap="onIndexTap" data-id="{{item.goodsid}}" data-name="{{item.name}}">
+          <text class="S4 T3">{{item.name}}</text>
+          <text class="S7 {{intZd==0?'T2':(intZd>0?'C1-font':'C2-font')}}">{{item.zxj}}</text>
+          <view class="container_h-indexcell-zd">
+            <text class="S2 {{intZd==0?'T2':(intZd>0?'C1-font':'C2-font')}}">{{item.intZd>0?'+'+item.zd:item.zd}}</text>
+            <view style="width:15rpx;"></view>
+            <text class="S2 {{intZd==0?'T2':(intZd>0?'C1-font':'C2-font')}}">{{item.zdf}}</text>
+          </view>
+        </view>
+        <view wx:if="{{index<2}}" style="height:135rpx;border-left:1rpx solid #e4e4e4;"></view>
       </view>
-    </view>
-    <view class="index-item-container">
-      <view class="index-item-data-container">
-        <text>上证指数</text>
-      </view>
-    </view>
-    <view class="index-item-container">
-      <view class="index-item-data-container">
-        <text>上证指数</text>
-      </view>
-    </view>
+    </block>
   </view>
+  <view class="container_h-header B1">
+    <text class="S2 T2 optional-header-sortlable_left">名称</text>
+    <text class="S2 T2 optional-header-sortlable_center">最新价</text>
+    <text class="S2 C1-font optional-header-sortlable_right" catchtap="doChangeSort_zdf">{{sortType===1?'涨跌幅↓':'涨跌幅↑'}}</text>
+  </view>
+  <!--列表-->
+
+  <image src="../../images/optional_add.png" mode="scaleToFill" class="search-icon" hidden="{{aryGoods.length!=0}}" bindtap="onAddBtnTap"></image>
+  
 </view>
+<!--搜索按钮-->
+<image class="icon_search" src="../../images/icon_optional_search.png" bindtap="onStockSearchEvent"></image>

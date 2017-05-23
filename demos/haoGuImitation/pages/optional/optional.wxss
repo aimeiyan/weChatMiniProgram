@@ -1,1 +1,82 @@
 /* pages/optional/optional.wxss */
+
+.container-frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.index_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.index_item_container {
+  width: 250rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index_item_data_container {
+  width: 249rpx;
+  height: 170rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container_h-indexcell-zd {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container_h-header {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  height: 70rpx;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.container_h-header .optional-header-sortlable_left {
+  display: inline-block;
+  width: 34%;
+  height: 100%;
+  line-height: 70rpx;
+  text-align: left;
+}
+
+.container_h-header .optional-header-sortlable_center {
+  display: inline-block;
+  width: 33%;
+  height: 100%;
+  line-height: 70rpx;
+  text-align: center;
+}
+
+.container_h-header .optional-header-sortlable_right {
+  display: inline-block;
+  width: 33%;
+  height: 100%;
+  line-height: 70rpx;
+  text-align: right;
+}
+.search-icon{
+  width: 208rpx;
+  height: 140rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
