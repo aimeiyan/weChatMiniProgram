@@ -1,2 +1,40 @@
-<!--pages/bk/bk.wxml-->
-<text>pages/bk/bk.wxml</text>
+<import src="../common/KLineView/KLineView.wxml" />
+<!--板块头部指标-->
+<view id="section_quotation">
+  <!--价格、涨跌、涨跌幅-->
+  <view class="quota_price" style="color:{{quotation.color}};">{{quotation.price}}</view>
+  <view class="quota_zd" style="color:{{quotation.color}};">{{quotation.zd}}</view>
+  <view class="quota_zdf" style="color:{{quotation.color}};">{{quotation.zdf}}</view>
+
+  <!--开盘、最高、最低-->
+  <text class="quota_item quota_row1 quota_colum3">开盘：</text>
+  <text class="quota_item quota_row2 quota_colum3">最高：</text>
+  <text class="quota_item quota_row3 quota_colum3">最低：</text>
+  <text class="quota_item quota_row1 quota_colum4">{{quotation.open}}</text>
+  <text class="quota_item quota_row2 quota_colum4">{{quotation.high}}</text>
+  <text class="quota_item quota_row3 quota_colum4">{{quotation.low}}</text>
+
+  <!--换手、涨数、跌数-->
+  <text class="quota_item quota_row1 quota_colum5">换手：</text>
+  <text class="quota_item quota_row2 quota_colum5">涨数：</text>
+  <text class="quota_item quota_row3 quota_colum5">跌数：</text>
+  <text class="quota_item quota_row1 quota_colum6">{{quotation.hsl}}</text>
+  <text class="quota_item quota_row2 quota_colum6">{{quotation.zs}}</text>
+  <text class="quota_item quota_row3 quota_colum6">{{quotation.ds}}</text>
+
+  <!--成交量、净流、平均-->
+  <text class="quota_item quota_row4 quota_colum1">成交量：</text>
+  <text class="quota_item quota_row4 quota_colum3">净流：</text>
+  <text class="quota_item quota_row4 quota_colum5">平均：</text>
+  <text class="quota_item quota_row4 quota_colum2">{{quotation.cjl}}</text>
+  <text class="quota_item quota_row4 quota_colum4">{{quotation.jl}}</text>
+  <text class="quota_item quota_row4 quota_colum6">{{quotation.pj}}</text>
+
+  <!--成交额、量比、振幅-->
+  <text class="quota_item quota_row5 quota_colum1">成交额：</text>
+  <text class="quota_item quota_row5 quota_colum3">量比：</text>
+  <text class="quota_item quota_row5 quota_colum5">振幅：</text>
+  <text class="quota_item quota_row5 quota_colum2">{{quotation.cjl}}</text>
+  <text class="quota_item quota_row5 quota_colum4">{{quotation.jl}}</text>
+  <text class="quota_item quota_row5 quota_colum6">{{quotation.pj}}</text>
+</view>

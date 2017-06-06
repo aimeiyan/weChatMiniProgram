@@ -15,7 +15,7 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
   },
   onReady: function () {
-    // 页面渲染完成
+    // 页面渲染完成 
     var that = this;
     SearchBar.init("代码/名称/简拼", that);
 
@@ -50,7 +50,7 @@ Page({
   onSearchBarChangedEvent: function (e) {
     var that = this;
     SearchBar.onSearchBarChangedEvent(e, that);
-    
+
     if (e.detail.value.length > 0) {
       Api.stock.search({
         key: e.detail.value
@@ -69,6 +69,29 @@ Page({
       that.setData({
         stockArray: viewmodel.getDefaultData()
       })
+    }
+  },
+  onAddOrDelStock: function (e) {
+    console.log("onAddOrDelStock", e);
+    var that = this;
+    var stock = that.data.stockArray[e.currentTarget.id];
+
+    Api.stock.commitOptionals({
+      goodsId: stock.goodsId
+    }).then(function (res) {
+      if (res == 0) {
+        stock.setOptional(!stock.optional);
+        that.setData(that.data);
+      }
+    }, function (res) {
+      console.log("添加自选股失败", res);
+    })
+  },
+  onShowStockDetail: function (e) {
+    console.log("onShowStockDetail", e);
+    if (e.detail.x < 315) {
+      var stock = e.currentTarget.dataset.stock;
+      Util.gotoQuote(stock.goodsId, stock.name, stock.code);
     }
   }
 })

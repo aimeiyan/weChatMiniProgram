@@ -1,1 +1,93 @@
 /* pages/bk/bk.wxss */
+
+#section_quotation {
+  position: relative;
+  width: 750rpx;
+  height: 213rpx;
+  margin-top: 21rpx;
+}
+
+#section_quotation .quota_price {
+  width: 280rpx;
+  height: 80rpx;
+  position: absolute;
+  font-size: 52rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+#section_quotation .quota_zd {
+  width: 140rpx;
+  height: 47rpx;
+  position: absolute;
+  top: 70rpx;
+  left: 140rpx;
+  line-height: 47rpx;
+  text-align: left;
+  padding-left: 8rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+
+#section_quotation .quota_zdf {
+  width: 140rpx;
+  height: 47rpx;
+  position: absolute;
+  top: 70rpx;
+  left: 0;
+  line-height: 47rpx;
+  text-align: right;
+  padding-right: 8rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+
+#section_quotation .quota_item {
+  position: absolute;
+  font-size: 26rpx;
+  color: #888;
+}
+
+#section_quotation .quota_row1 {
+  top: 10rpx;
+}
+
+#section_quotation .quota_row2 {
+  top: 50rpx;
+}
+
+#section_quotation .quota_row3 {
+  top: 90rpx;
+}
+
+#section_quotation .quota_row4 {
+  top: 140rpx;
+}
+
+#section_quotation .quota_row5 {
+  top: 181rpx;
+}
+
+#section_quotation .quota_colum1 {
+  left: 30rpx;
+}
+
+#section_quotation .quota_colum2 {
+  left: 135rpx;
+}
+
+#section_quotation .quota_colum3 {
+  left: 293rpx;
+}
+
+#section_quotation .quota_colum4 {
+  left: 372rpx;
+}
+
+#section_quotation .quota_colum5 {
+  left: 554rpx;
+}
+
+#section_quotation .quota_colum6 {
+  left: 632rpx;
+}
