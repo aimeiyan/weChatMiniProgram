@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/bk/bk",
-    "pages/search/search",
+      "pages/bk/bk",
     "pages/optional/optional",
+    "pages/search/search",
     "pages/kanpan/kanpan",
     "pages/haogu/haogu",
     "pages/stock/stock",

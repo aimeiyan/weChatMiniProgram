@@ -34,7 +34,11 @@
   <text class="quota_item quota_row5 quota_colum1">成交额：</text>
   <text class="quota_item quota_row5 quota_colum3">量比：</text>
   <text class="quota_item quota_row5 quota_colum5">振幅：</text>
-  <text class="quota_item quota_row5 quota_colum2">{{quotation.cjl}}</text>
-  <text class="quota_item quota_row5 quota_colum4">{{quotation.jl}}</text>
-  <text class="quota_item quota_row5 quota_colum6">{{quotation.pj}}</text>
+  <text class="quota_item quota_row5 quota_colum2">{{quotation.cje}}</text>
+  <text class="quota_item quota_row5 quota_colum4">{{quotation.lb}}</text>
+  <text class="quota_item quota_row5 quota_colum6">{{quotation.zf}}</text>
+</view>
+
+<view id="selector_time">
+<text style="background-color:{{currentPeriodIndex==0?'#eb333b':'#f8f8f8'}};color:{{currentPeriodIndex==0?'#ffffff':'#353535'}};border:{{currentPeriodIndex==0?'1rpx solid rgba(255,255,255,0)':'1rpx solid #dadada'}};border-left:none;" bindtap="onPeriodSelectorClick" data-index="0">分时</text>
 </view>
