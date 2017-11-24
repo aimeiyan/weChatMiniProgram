@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("/resource/images/my_bg.jpg") no-repeat 0 0;
   background-size: cover;
   height: 400rpx;
 }

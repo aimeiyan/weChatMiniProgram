@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/bk/bk",
     "pages/search/search",
     "pages/optional/optional",
@@ -7,7 +8,6 @@
     "pages/haogu/haogu",
     "pages/stock/stock",
     "pages/newsdetail/newsdetail",
-    "pages/index/index",
     "pages/fund/fund"
   ],
   "window": {

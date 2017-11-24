@@ -9,9 +9,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#000",

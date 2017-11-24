@@ -1,5 +1,5 @@
 <view>
-  <view class="userInfo">
+  <view class="userInfo" style='background: url("/resource/images/my_bg.jpg") no-repeat 0 0;'>
     <image src="{{userInfo.avatarUrl}}" class="userInfo-avatar"></image>
     <text class="userInfo-nickName">{{userInfo.nickName}}</text>
   </view>
