@@ -1,0 +1,11 @@
+<wxs module="m1">
+  module.exports = {
+    message: 'Hello,world!'
+  }
+</wxs>
+
+<view style="color:{{colorvalue}}">{{m1.message}}</view>
+
+
+<wxs src="./m2.wxs" module="m2"></wxs>
+<view>{{m2.message}}</view>

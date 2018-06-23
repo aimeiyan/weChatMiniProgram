@@ -7,3 +7,12 @@
 </template>
 
 <template is="tempItem" data="{{...item}}"></template>
+
+<import src="a.wxml"></import>
+<template is="a"></template>
+
+<import src="c.wxml"></import>
+<template is="c"></template>
+
+<include src="d.wxml"></include>
+<template is="d"></template>

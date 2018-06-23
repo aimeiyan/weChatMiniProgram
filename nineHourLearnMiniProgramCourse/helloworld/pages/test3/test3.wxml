@@ -1,0 +1,6 @@
+<view class="container-A" bindtap="clickA" capture-bind:tap="captureClickA">
+  container-A
+  <view class="container-B" bindtap='clickB' capture-bind:tap="captureClickB">container-B
+    <view class="container-C" bindtap='clickC' capture-bind:tap="captureClickC">container-C</view>
+  </view>
+</view>

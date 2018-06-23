@@ -1,0 +1,24 @@
+/* pages/test3/test3.wxss */
+.container-A{
+  height: 800rpx;
+  margin: 10rpx;
+  border:1px solid red;
+}
+
+.container-B{
+  width: 80%;
+  height: 600rpx;
+  margin-top: 50rpx;
+  border:1px solid orchid;
+}
+
+.container-C{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 400rpx;
+  margin-top: 30px;
+  border:1px solid blue;
+}
