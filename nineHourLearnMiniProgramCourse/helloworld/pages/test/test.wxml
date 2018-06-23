@@ -1,0 +1,9 @@
+<template name="tempItem">
+  <view>
+    <view>收件人：{{name}}</view>
+    <view>联系方式：{{phone}}</view>
+    <view>地址：{{address}}</view>
+  </view>
+</template>
+
+<template is="tempItem" data="{{...item}}"></template>
