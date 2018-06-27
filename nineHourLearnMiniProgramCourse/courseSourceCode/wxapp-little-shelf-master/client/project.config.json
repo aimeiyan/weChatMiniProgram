@@ -10,7 +10,8 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.94",
 	"isGameTourist": false,
-	"appid": "/** this is your appid **/",
+	"appid": "wxf9e12de69c0918f0",
+	"projectname": "shelf",
 	"condition": {
 		"search": {
 			"current": -1,

@@ -3,7 +3,7 @@
     <view class="page-section page-section-gap">
       <view class="page-section-title">表单组件在label内</view>
       <checkbox-group class="group" bindchange="checkboxChange">
-        <view class="label-1" wx:for="{{checkboxItems}}">
+        <view class="label-1" wx:for="{{checkboxItems}}" wx:key="{{item.key}}">
           <label>
             <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
             <text class="label-1-text">{{item.value}}</text>
@@ -15,7 +15,7 @@
     <view class="page-section page-section-gap">
       <view class="page-section-title">label用for标识表单组件</view>
       <radio-group class="group" bindchange="radioChange">
-        <view class="label-2" wx:for="{{radioItems}}">
+        <view class="label-2" wx:for="{{radioItems}}" wx:key="{{item.key}}">
           <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}"></radio>
           <label class="label-2-text" for="{{item.name}}"><text>{{item.name}}</text></label>
         </view>

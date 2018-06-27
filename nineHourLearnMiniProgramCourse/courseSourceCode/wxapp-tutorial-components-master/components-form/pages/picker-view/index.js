@@ -28,6 +28,7 @@ Page({
     },
     bindChange: function (e) {
         const val = e.detail.value
+        console.log(val,"val---");
         this.setData({
             year: this.data.years[val[0]],
             month: this.data.months[val[1]],

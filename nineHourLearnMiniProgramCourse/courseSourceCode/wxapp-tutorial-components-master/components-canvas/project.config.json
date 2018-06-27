@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
-	"appid": "/* write your appid */",
+	"appid": "wxf9e12de69c0918f0",
 	"projectname": "%E7%BB%84%E4%BB%B6-%E7%94%BB%E5%B8%83",
 	"isGameTourist": false,
 	"condition": {
@@ -18,6 +18,10 @@
 			"list": []
 		},
 		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
 			"current": -1,
 			"list": []
 		},

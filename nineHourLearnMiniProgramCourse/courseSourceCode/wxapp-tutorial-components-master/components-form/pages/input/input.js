@@ -11,12 +11,14 @@ Page({
   bindReplaceInput: function (e) {
     var value = e.detail.value
     var pos = e.detail.cursor
+    console.log(pos,"cur---");
     var left
     if (pos !== -1) {
       // 光标在中间
       left = e.detail.value.slice(0, pos)
       // 计算光标的位置
       pos = left.replace(/11/g, '2').length
+      console.log(left,pos)
     }
 
     // 直接返回对象，可以对输入进行过滤处理，同时可以控制光标的位置
